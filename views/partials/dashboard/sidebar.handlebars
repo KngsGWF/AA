@@ -1,0 +1,263 @@
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md " id="sidebar">
+    <div class="container-fluid">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse"
+            aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="index-2.html">
+            <img src="/img/logo.png" class="navbar-brand-img 
+          mx-auto" alt="...">
+        </a>
+
+        <!-- User (xs) -->
+        <div class="navbar-user d-md-none">
+
+            <!-- Dropdown -->
+            <div class="dropdown">
+
+                <!-- Toggle -->
+                <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <div class="avatar avatar-sm avatar-online">
+                        <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </div>
+                </a>
+
+                <!-- Menu -->
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
+                    <a href="profile-posts.html" class="dropdown-item">Profile</a>
+                    <a href="account-general.html" class="dropdown-item">Settings</a>
+                    <hr class="dropdown-divider">
+                    <a  class="dropdown-item" id="logoutBtn2">Logout</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+            <!-- Form -->
+            <form class="mt-4 mb-3 d-md-none">
+                <div class="input-group input-group-rounded input-group-merge">
+                    <input type="search" class="form-control form-control-rounded form-control-prepended"
+                        placeholder="Search" aria-label="Search">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <span class="fe fe-search"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Navigation -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/dashboard">
+                            <i class="fe fe-home"></i> Dashboards 
+                        </a>
+                    </li>
+                    <a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button"
+                        aria-expanded="true" aria-controls="sidebarDashboards">
+                        <i class="fe fe-git-branch"></i> Create Nav Links
+                    </a>
+                    <div class="collapse show" id="sidebarDashboards">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/dashboard/link/leagues" class="nav-link active">
+                                    Leagues
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="dashboard-project-management.html" class="nav-link ">
+                                    International
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="sidebarPages">
+                        <i class="fe fe-file"></i> News
+                    </a>
+                    <div class="collapse " id="sidebarPages">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="#sidebarProfile" class="nav-link" >
+                                    List News
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sidebarProject" class="nav-link" >
+                                    Create News
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false"
+                        aria-controls="sidebarAuth">
+                        <i class="fe fe-user"></i> Users
+                    </a>
+                    <div class="collapse" id="sidebarAuth">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/dashboard/account-members" class="nav-link">
+                                    List Users
+                                </a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sidebarSignUp" class="nav-link" >
+                                    Create User
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Divider -->
+            <hr class="navbar-divider my-3">
+           
+            <!-- Heading -->
+            <h6 class="navbar-heading">
+                Documentation
+            </h6>
+
+            <!-- Navigation -->
+          
+            <!-- Push content down -->
+            <div class="mt-auto"></div>
+
+
+            <!-- Customize -->
+            <div id="popoverDemo" data-toggle="popover" data-trigger="manual" title="Make Dashkit Your Own!"
+                data-content="Switch the demo to Dark Mode or adjust the navigation layout, icons, and colors!">
+                <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
+                    <i class="fe fe-sliders mr-2"></i> Customize
+                </a>
+            </div>
+
+
+
+            <!-- User (md) -->
+            <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+                <!-- Icon -->
+                <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
+                    <span class="icon">
+                        <i class="fe fe-bell"></i>
+                    </span>
+                </a>
+
+                <!-- Dropup -->
+                <div class="dropup">
+
+                    <!-- Toggle -->
+                    <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar avatar-sm avatar-online">
+                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle"
+                                alt="...">
+                        </div>
+                    </a>
+
+                    <!-- Menu -->
+                    <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
+                        <a href="profile-posts.html" class="dropdown-item">Profile</a>
+                        <a href="account-general.html" class="dropdown-item">Settings</a>
+                        <hr class="dropdown-divider">
+                        <a id="logoutBtn1" class="dropdown-item">Logout</a>
+                    </div>
+
+                </div>
+
+                <!-- Icon -->
+                <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
+                    <span class="icon">
+                        <i class="fe fe-search"></i>
+                    </span>
+                </a>
+
+            </div>
+
+
+        </div> <!-- / .navbar-collapse -->
+
+    </div>
+</nav>
+<script>
+    let logoutBtnElem1 = document.getElementById("logoutBtn1");
+    let logoutBtnElem2 = document.getElementById("logoutBtn2");
+
+    if(logoutBtnElem1 && logoutBtnElem2){
+        logoutBtnElem1.addEventListener("click",async (e)=>{
+            e.preventDefault();
+            try{
+                let data  = await swal({
+                    title: "Hello, Do you want to Logout?",
+                    icon: "info",
+                    button: "Yes, logout."
+                });
+                localStorage.clear();
+                return 
+
+                if(data){
+                    let headers = {
+                        "Authorization": `Bearer ${TOKEN}`
+                    }
+                    let response = axios({
+                        method: "Post",
+                        url: "/api/auth/logout",
+                        data: {},
+                        headers
+                    })
+
+                }
+                console.log(data)
+            }catch(err){
+                console.log(err,err)
+            }
+        })
+        logoutBtnElem2.addEventListener("click", async (e) => {
+            e.preventDefault();
+            try {
+                let data = await swal({
+                    title: "Hello, Do you want to Logout?",
+                    icon: "info",
+                    button: "Yes, logout."
+                });
+                localStorage.clear();
+                return
+
+                if (data) {
+                    let headers = {
+                        "Authorization": `Bearer ${TOKEN}`
+                    }
+                    let response = axios({
+                        method: "Post",
+                        url: "/api/auth/logout",
+                        data: {},
+                        headers
+                    })
+
+                }
+                console.log(data)
+            } catch (err) {
+                console.log(err, err)
+            }
+        })
+    }
+</script>

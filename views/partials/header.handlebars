@@ -1,0 +1,86 @@
+<header class="header-section">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ht-info">
+                        <ul>
+                            <li id="display_time"></li>
+                            <li><a href="/login">Sign in</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ht-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo" style="padding: 20px 0px;">
+                        <a href="/"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="nav-menu">
+                        <ul class="main-menu">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="./club.html">News</a></li>
+                            <li><a href="./schedule.html">Transfers</a></li>
+                            <li><a href="/leagues">Leagues</a>
+                                <ul class="dropdown" id="my_nav_holder" data="{{links}}" >
+                                </ul>
+                            </li>
+                            <li><a href="#">International</a>
+                                <ul class="dropdown">
+                                    <li><a href="https://globalwatchfootball.com/category/fifa/">FIFA</a></li>
+                                    <li><a href="https://globalwatchfootball.com/category/caf/">CAF</a></li>
+                                    <li><a href="https://globalwatchfootball.com/category/uefa/">UEFA</a></li>
+                                    <li><a href="https://globalwatchfootball.com/category/concacaf/">CONCACAF</a></li>
+                                    <li><a href="https://globalwatchfootball.com/category/conmebol/">CONMEBOL</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Women's Football</a></li>
+                            
+                            <li><a href="./contact.html">Live</a></li>
+                        </ul>
+                        <div class="nm-right search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <script>
+        let my_nav_holder = document.getElementById("my_nav_holder");
+        if (my_nav_holder) {
+            let nav_links = document.getElementById("my_nav_holder").getAttribute("data")
+            nav_links = JSON.parse(nav_links)
+            let link = ''
+            for (let a = 0; a < nav_links.length; a++) {
+                let l = nav_links[a];
+                link = link + `<li><a href="/leagues/${l.league.id}">${l.league.name}</a></li>`
+            }
+            my_nav_holder.innerHTML = link;
+            let small_nav_link = document.getElementById("small_nav_link");
+            if(small_nav_link){
+                small_nav_link.innerHTML = link
+            }
+        }
+    </script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Specer Template">
+    <meta name="keywords" content="Specer, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    {{>loader}}    
+
+    <!-- Offcanvas Menu Section Begin -->
+    {{>navbarmenu}}
+   
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    {{>header}}
+    <!-- Header End -->
+
+   {{{body}}}
+
+    <!-- Footer Section Begin -->
+    {{>footer}}
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="fa fa-close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+
+    <script>
+        
+        const currentDate = new Date();
+        const hours = currentDate.getHours().toString().padStart(2, '0');
+        const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+        const timeString = `${hours}:${minutes}`;
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        const month = monthNames[currentDate.getMonth()];
+        const day = currentDate.getDate().toString().padStart(2, '0');
+        const year = currentDate.getFullYear().toString();
+        const dateString = `${month} ${day}, ${year}`;
+
+        const formattedDate = `${timeString} - ${dateString}`;
+        let displayTimeElement = document.getElementById("display_time")
+        let displayTimeMobile = document.getElementById("display_time_mobile")
+        if(displayTimeElement){
+            displayTimeElement.innerHTML = formattedDate 
+        }
+        if(displayTimeMobile){
+            displayTimeMobile.innerHTML = formattedDate
+        }
+
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
